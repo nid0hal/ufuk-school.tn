@@ -4,10 +4,10 @@ function App() {
   return (
     <div style={styles.page}>
       <div style={styles.card}>
-        <h1 style={styles.title}>🚀 UFUK</h1>
+        <h1 style={styles.title}>🚀 UFUK School</h1>
         <h2 style={styles.subtitle}>Coming Soon</h2>
         <p style={styles.text}>
-          Notre nouvelle plateforme de soutien scolaire arrive bientôt.
+        Notre plateforme de soutien scolaire arrive bientôt Inshallah ❤️
         </p>
         <div style={styles.loader}></div>
       </div>
