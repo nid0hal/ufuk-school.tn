@@ -3,6 +3,64 @@
   box-sizing: border-box;
 }
 
+/* Social bubble bottom-right */
+.social-bubble {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  width: 220px;
+  height: 220px;
+  background: #2f3e8f;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  
+}
+.social-bubble {
+  pointer-events: auto;
+  z-index: 10;
+}
+
+/* Icons row */
+.social-icons {
+  display: flex;
+  gap: 14px;
+  font-size: 18px;
+}
+
+.social-icons i {
+  background: white;
+  color: #2f3e8f;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.social-icons i:hover {
+  box-shadow: 0 0 10px rgba(255, 213, 79, 0.8);
+}
+/* Username text */
+.social-bubble p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+.social-icons a {
+  text-decoration: none;
+}
+
+.social-icons a:hover i {
+  transform: scale(1.2);
+  background: #ffd54f;
+  color: #2f3e8f;
+}
 body, html, #root {
   height: 100%;
   margin: 0;
@@ -80,23 +138,10 @@ body, html, #root {
 }
 
 /* ===== Kid Image ===== */
-.kid {
-  position: absolute;
-  left: 40px;
-  bottom: 0;
-  height: 85%;
-  z-index: 2;
-}
+
 
 /* ===== Center Content ===== */
-.center {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  top: 50%;
-  transform: translateY(-50%);
-}
+
 
 /* ===== Logo Circle ===== */
 .logo-circle {
@@ -170,6 +215,8 @@ body, html, #root {
   text-decoration: underline;
 }
 
+
+
 /* ===== Notify Button ===== */
 .notify-btn {
   background: #ffd54f;
@@ -238,27 +285,47 @@ body, html, #root {
   transform: translateY(-3px);
 }
 
-/* Email box */
 .email-box {
   max-height: 0;
   overflow: hidden;
   transition: all 0.5s ease;
   opacity: 0;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .email-box.show {
-  max-height: 100px;
+  max-height: 200px;
   opacity: 1;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .email-box input {
-  padding: 10px 14px;
-  border-radius: 20px;
+  padding: 12px 16px;
+  border-radius: 25px;
   border: none;
+  width: 180px;
+  outline: none;
+}
+
+/* Make email bigger */
+.email-box input[type="email"] {
   width: 220px;
+}
+
+.send-btn {
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #2f3e8f;
+  color: white;
+  cursor: pointer;
   margin-right: 8px;
 }
+
+
 
 .send-btn {
   padding: 10px 16px;
@@ -361,3 +428,83 @@ body, html, #root {
   letter-spacing: 1px;
   color: #555;
 }
+/* ===== Decorative Background ===== */
+.bg-decor {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  
+}
+
+.bg-decor {
+  pointer-events: none;
+}
+
+/* Big blue circle (top right) */
+.blue-circle {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border: 16px solid #2f3e8f;
+  border-radius: 50%;
+  top: -120px;
+  right: -120px;
+  opacity: 0.9;
+}
+
+.yellow-curve {
+  position: absolute;
+  left: -250px;
+  top: -750px;
+  width: 1600px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.yellow-curve path {
+  stroke-linecap: round;
+}
+
+.kid {
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+  height: 85%;
+  z-index: 2;
+}
+
+.center {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* TOP LEFT */
+.yellow-curve-top {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 800px;
+  z-index: 1;
+}
+
+/* BOTTOM LINE (IMPORTANT FIX) */
+.yellow-curve-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: -15px;   /* START outside screen */
+  width: 1400px; /* bigger = smoother */
+  z-index: 1;
+}
+
+/* smooth edges */
+.yellow-curve-top path,
+.yellow-curve-bottom path {
+  stroke-linecap: round;
+}
+
+
+
