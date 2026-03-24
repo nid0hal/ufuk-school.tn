@@ -3,6 +3,9 @@ import "./App.css";
 import kid from "./assets/kids.png";
 import logo from "./assets/logo1.png";
 import emailjs from "emailjs-com";
+import AppRoutes from "./routes";
+
+
 
 function App() {
   const [showContact, setShowContact] = useState(false);
@@ -217,6 +220,7 @@ function TimeBox({ value, label }) {
       <div className="time-label">{label}</div>
     </div>
   );
+  
 }
 
 export default App;
